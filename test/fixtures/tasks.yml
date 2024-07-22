@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_id: 1
+  task_name: MyString
+  description: MyString
+  dead_line: 2024-07-20 21:37:32
+  user: one
+
+two:
+  task_id: 1
+  task_name: MyString
+  description: MyString
+  dead_line: 2024-07-20 21:37:32
+  user: two

@@ -1,0 +1,5 @@
+<p>Dear <%= @user.name %>,</p>
+<p>This is a reminder that your task "<%= @task.task_name %>" has a deadline on <%= @task.dead_line.strftime('%Y-%m-%d %H:%M:%S') %>.</p>
+<p><a href="<%= @task_url %>">Click here to view your task</a></p>
+<p>Thank you,</p>
+

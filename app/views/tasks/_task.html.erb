@@ -5,23 +5,23 @@
     </div>
     <div class="card-body">
       <dl class="row">
-        <dt class="col-sm-3">Task Name:</dt>
-        <dd class="col-sm-9"><%= task.task_name %></dd>
+        <dt class="col-sm-4 col-md-3">Task Name:</dt>
+        <dd class="col-sm-8 col-md-9"><%= task.task_name %></dd>
 
-        <dt class="col-sm-3">Description:</dt>
-        <dd class="col-sm-9"><%= task.description %></dd>
+        <dt class="col-sm-4 col-md-3">Description:</dt>
+        <dd class="col-sm-8 col-md-9"><%= task.description %></dd>
 
-        <dt class="col-sm-3">Dead Line:</dt>
-        <dd class="col-sm-9"><%= task.dead_line %></dd>
+        <dt class="col-sm-4 col-md-3">Deadline:</dt>
+        <dd class="col-sm-8 col-md-9"><%= task.dead_line %></dd>
 
-        <dt class="col-sm-3">Status:</dt>
-        <dd class="col-sm-9">
+        <dt class="col-sm-4 col-md-3">Status:</dt>
+        <dd class="col-sm-8 col-md-9">
           <span class="badge badge-<%= task.status %>"><%= task.status.humanize %></span>
         </dd>
       </dl>
     </div>
-    <div class="card-footer d-flex justify-content-between">
-      <div>
+    <div class="card-footer d-flex flex-column flex-md-row justify-content-between">
+      <div class="mb-2 mb-md-0">
         <%= link_to 'Edit Task', edit_task_path(task), class: "btn btn-primary" %>
         <%= link_to 'Back to List', tasks_path, class: "btn btn-secondary ml-2" %>
       </div>

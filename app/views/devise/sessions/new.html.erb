@@ -1,6 +1,13 @@
 <br><br><br>
 <div class="container">
+<<<<<<< HEAD
   <div class="form-container" style = "max-width: 50%;">
+=======
+  <div class="form-container">
+    <div class="image-container">
+      <%= image_tag("pictures/road.jpeg", alt: "Description", class: "image") %>
+    </div>
+>>>>>>> origin/main
     <div class="form-content">
       <h2 class="title">Log In</h2>
 
@@ -16,7 +23,11 @@
         <% if devise_mapping.rememberable? %>
           <div class="form-group form-check">
             <%= f.check_box :remember_me, class: 'form-check-input' %>
+<<<<<<< HEAD
             <%= f.label :remember_me, class: 'form-check-label', text: 'Remember me' %>
+=======
+            <%= f.label :remember_me, class: 'form-check-label' %>
+>>>>>>> origin/main
           </div>
         <% end %>
 

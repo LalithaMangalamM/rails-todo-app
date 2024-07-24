@@ -25,6 +25,9 @@
   font-size: 2vw;
   color: #42647D;
 }
+.navbar-brand:hover {
+  color: #fff;
+}
 .navbar-nav {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +65,13 @@
   {
     color: azure;
   }
+<<<<<<< HEAD
 
+=======
+  /* .custom-toggler.navbar-toggler {
+    border-color: rgb(255,102,203);
+  }  */
+>>>>>>> origin/main
   @media (max-width: 768px) {
     .nav-link.custom-underline {
       margin-right: 10px; 

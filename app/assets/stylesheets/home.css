@@ -1,7 +1,29 @@
-/* global and header styles  */
+
 
 .body{
     background-color: #F7E7DC;
+    font-family: "Poppins", sans-serif;
+}
+.navbar-brand:hover {
+  color: #fff;
+}
+.font
+{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 3vw;
+  color: black;
+}
+.btn
+{
+  background-color: #42647D;
+}
+.font-small
+{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 2vw;
+  color: #42647D;
 }
 .navbar-nav {
     display: flex;
@@ -12,6 +34,7 @@
     position: relative;
     margin-right: 20px; 
     display: inline-block; 
+    color: #fff; 
   }
   
   .nav-link.custom-underline::after {
@@ -22,14 +45,24 @@
     bottom: -5px; 
     height: 3px; 
     width: 0;
-    background-color: #007bff; 
+    background-color: #fff; 
     transition: width 0.3s ease;
   }
   
   .nav-link.custom-underline:hover::after {
     width: 100%;
   }
-  
+  .nav-link{
+    color: azure;
+  }
+  .nav-link::after{
+    color: azure;
+  }
+  .navbar-brand
+  {
+    color: azure;
+  }
+
   @media (max-width: 768px) {
     .nav-link.custom-underline {
       margin-right: 10px; 

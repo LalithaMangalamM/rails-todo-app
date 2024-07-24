@@ -1,16 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<br><br><br>
+<div class="grid d-flex flex-column mb-3">
+  <% if user_signed_in? %>
+    <h1 class="text-center">Tasks</h1>
 
-<% if user_signed_in? %>
-  <h1>Tasks</h1>
+    <div class="d-flex justify-content-end mb-3">
+      <%= link_to "Create New Task", new_task_path, class: "btn btn-success d-none d-sm-block" %>
+    </div>
 
-  <div class="d-flex justify-content-between mb-3">
-    <div></div>
-    <%= link_to "New Task", new_task_path, class: "btn btn-success" %>
-  </div>
+    <div class="text-center d-sm-none mb-3">
+      <%= link_to "Create New Task", new_task_path, class: "btn btn-success" %>
+    </div>
 
-  <div id="tasks">
-    <% @tasks.each do |task| %>
-      <%= render task %>
-    <% end %>
-  </div>
-<% end %>
+    <div id="tasks" class="row">
+      <% @tasks.each do |task| %>
+        <%= render task %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+

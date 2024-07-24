@@ -1,12 +1,17 @@
-<nav class="navbar navbar-expand-lg py-3 shadow-sm p-3 rounded" style="background: #42647D;">
+<nav class="navbar navbar-expand-lg py-3 shadow-sm p-3 sticky-top" style="background: #42647D;">
   <%= link_to "Todo App", root_path, class: "navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1z" fill="#ffffff"/></svg> <!-- Set color to white -->
+</button>
+
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
+      <li class="nav-item">
+          <%= link_to "Tasks", tasks_path, class: "nav-link custom-underline" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link custom-underline" %>
         </li>

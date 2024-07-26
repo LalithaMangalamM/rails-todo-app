@@ -1,33 +1,24 @@
-<div class="container mt-5">
-  <div class="card">
-    <div class="card-header">
-      <h4 class="mb-0">Task Details</h4>
-    </div>
+<div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+  <div class="card shadow-sm border-0 h-100">
     <div class="card-body">
-      <dl class="row">
-        <dt class="col-sm-3">Task Name:</dt>
-        <dd class="col-sm-9"><%= task.task_name %></dd>
-
-        <dt class="col-sm-3">Description:</dt>
-        <dd class="col-sm-9"><%= task.description %></dd>
-
-        <dt class="col-sm-3">Dead Line:</dt>
-        <dd class="col-sm-9"><%= task.dead_line %></dd>
-
-        <dt class="col-sm-3">Status:</dt>
-        <dd class="col-sm-9">
-          <span class="badge badge-<%= task.status %>"><%= task.status.humanize %></span>
-        </dd>
-      </dl>
+      <h5 class="card-title"><%= task.task_name %></h5>
+      <p class="card-text"><%= task.description %></p>
+      <p class="card-text"><small class="text-muted">Deadline: <%= task.dead_line.strftime("%Y-%m-%d") %></small></p>
+      <p class="card-text">
+        Status: 
+        <% case task.status %>
+        <% when 'missed' %>
+          <span class="badge bg-danger" style = "color: white" >Missed</span>
+        <% when 'pending' %>
+          <span class="badge bg-warning" style = "color: white">Pending</span>
+        <% when 'completed' %>
+          <span class="badge bg-success" style = "color: white">Completed</span>
+        <% end %>
+      </p>
     </div>
     <div class="card-footer d-flex justify-content-between">
-      <div>
-        <%= link_to 'Edit Task', edit_task_path(task), class: "btn btn-primary" %>
-        <%= link_to 'Back to List', tasks_path, class: "btn btn-secondary ml-2" %>
-      </div>
-      <div>
-        <%= button_to "Destroy this task", task, method: :delete, class: "btn btn-danger" %>
-      </div>
+      <%= link_to 'Edit Task', edit_task_path(task), class: "btn me-2", style:"background-color: #42647D; color:white" %>
+      <%= button_to 'Delete Task', task_path(task), method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
     </div>
   </div>
 </div>

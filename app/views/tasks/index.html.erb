@@ -1,16 +1,31 @@
-<p style="color: green"><%= notice %></p>
+<br><br>
+<div class="grid d-flex flex-column mb-3">
+  <%# check for user signed in %>
 
-<% if user_signed_in? %>
-  <h1>Tasks</h1>
+  <% if user_signed_in? %>
+    <h1 class="text-center">Tasks</h1>
+    <br>
+    <%= form_with url: tasks_path, method: :get, local: true do %>
+    <div class="form-group text-center d-flex justify-content-between" >
+      <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Type and press enter to search",  style:"max-width: 40%;" %>
+      <%= select_tag :status, options_for_select(Task.statuses.keys.map { |status| [status.humanize, status] }, params[:status]), include_blank: "All", class: "form-control",  style:"max-width: 40%;" %>
+      <%= submit_tag "Search", class: "btn ", style: "background-color: #42647D; color: white" %>
+    </div>
+  <% end %>
 
-  <div class="d-flex justify-content-between mb-3">
-    <div></div>
-    <%= link_to "New Task", new_task_path, class: "btn btn-success" %>
-  </div>
+    <div class="d-flex justify-content-end mb-3">
+      <%= link_to "Create New Task", new_task_path, class: "btn btn-success d-none d-sm-block" %>
+    </div>
 
-  <div id="tasks">
-    <% @tasks.each do |task| %>
-      <%= render task %>
-    <% end %>
-  </div>
-<% end %>
+    <div class="text-center d-sm-none mb-3">
+      <%= link_to "Create New Task", new_task_path, class: "btn btn-success" %>
+    </div>
+
+    <div id="tasks" class="row">
+      <% @tasks.each do |task| %>
+        <%= render task %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+

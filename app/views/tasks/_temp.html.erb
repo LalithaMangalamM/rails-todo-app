@@ -1,0 +1,56 @@
+<br/>
+<div class="container">
+  <div class="form-container" style="max-width: 75%; padding: 2%;">
+    <div class="form-content">
+      <h2 class="title"><%= @task.persisted? ? 'Edit Task' : 'New Task' %></h2>
+
+      <%= form_with(model: @task, local: true, html: { class: "form" }) do |form| %>
+        <% if @task.errors.any? %>
+          <div class="alert alert-danger">
+            <h4><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h4>
+            <ul>
+              <% @task.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="row mb-3">
+          <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+              <%= form.label :task_name, class: 'form-label' %>
+              <%= form.text_field :task_name, placeholder: 'Task Name', class: 'input form-control' %>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+              <%= form.label :description, class: 'form-label' %>
+              <%= form.text_area :description, placeholder: 'Description', class: 'input form-control', rows: 5 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+              <%= form.label :dead_line, class: 'form-label' %>
+              <%= form.datetime_field :dead_line, placeholder: 'Deadline', class: 'input form-control' %>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="form-group">
+              <%= form.label :status, class: 'form-label' %>
+              <%= form.select :status, options_for_select(Task.statuses.keys.map { |status| [status.humanize, status] }, @task.status), {}, class: 'input form-control' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= form.submit @task.persisted? ? "Save Changes" : "Create Task", class: 'button btn btn-primary', style:"background-color: #42647D; color:white"%>
+          <%= link_to 'Back', tasks_path, class: 'button btn btn-secondary ms-2', style:"background-color: #42647D; color:white" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

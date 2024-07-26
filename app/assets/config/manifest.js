@@ -4,3 +4,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link home
 //= link form
+//= link tasks

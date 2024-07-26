@@ -1,0 +1,69 @@
+Total allocated: 80 bytes (2 objects)
+Total retained:  40 bytes (1 objects)
+
+allocated memory by gem
+-----------------------------------
+        80  lalitha/app
+
+allocated memory by file
+-----------------------------------
+        80  /home/lalitha/app/todo/memory_profiler.rb
+
+allocated memory by location
+-----------------------------------
+        40  /home/lalitha/app/todo/memory_profiler.rb:5
+        40  /home/lalitha/app/todo/memory_profiler.rb:6
+
+allocated memory by class
+-----------------------------------
+        80  Array
+
+allocated objects by gem
+-----------------------------------
+         2  lalitha/app
+
+allocated objects by file
+-----------------------------------
+         2  /home/lalitha/app/todo/memory_profiler.rb
+
+allocated objects by location
+-----------------------------------
+         1  /home/lalitha/app/todo/memory_profiler.rb:5
+         1  /home/lalitha/app/todo/memory_profiler.rb:6
+
+allocated objects by class
+-----------------------------------
+         2  Array
+
+retained memory by gem
+-----------------------------------
+        40  lalitha/app
+
+retained memory by file
+-----------------------------------
+        40  /home/lalitha/app/todo/memory_profiler.rb
+
+retained memory by location
+-----------------------------------
+        40  /home/lalitha/app/todo/memory_profiler.rb:6
+
+retained memory by class
+-----------------------------------
+        40  Array
+
+retained objects by gem
+-----------------------------------
+         1  lalitha/app
+
+retained objects by file
+-----------------------------------
+         1  /home/lalitha/app/todo/memory_profiler.rb
+
+retained objects by location
+-----------------------------------
+         1  /home/lalitha/app/todo/memory_profiler.rb:6
+
+retained objects by class
+-----------------------------------
+         1  Array
+

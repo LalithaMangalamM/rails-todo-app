@@ -11,7 +11,11 @@
 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+<<<<<<< HEAD
   font-size: 4vw;
+=======
+  font-size: 3vw;
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
   color: black;
 }
 .btn
@@ -24,6 +28,12 @@
   font-weight: 200;
   font-size: 2vw;
   color: #42647D;
+<<<<<<< HEAD
+=======
+}
+.navbar-brand:hover {
+  color: #fff;
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
 }
 .navbar-nav {
     display: flex;
@@ -62,7 +72,17 @@
   {
     color: azure;
   }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+  /* .custom-toggler.navbar-toggler {
+    border-color: rgb(255,102,203);
+  }  */
+>>>>>>> origin/main
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
   @media (max-width: 768px) {
     .nav-link.custom-underline {
       margin-right: 10px; 

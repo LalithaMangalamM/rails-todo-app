@@ -63,6 +63,7 @@ class TasksController < ApplicationController
 
   private
 
+<<<<<<< HEAD
   def set_task
     @task = Task.find(params[:id])
   end
@@ -70,4 +71,10 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:task_name, :description, :dead_line, :status, :reminder_sent, :deadline_mail_sent)
   end
+=======
+    # Only allow a list of trusted parameters through.
+    def task_params
+      params.require(:task).permit(:task_name, :description, :dead_line, :status)
+    end
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
 end

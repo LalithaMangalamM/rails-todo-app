@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <br><br>
 <div class="grid d-flex flex-column mb-3">
   <%# check for user signed in %>
@@ -17,6 +18,17 @@
       <%= link_to "Create New Task", new_task_path, class: "btn btn-success d-none d-sm-block" %>
     </div>
 
+=======
+<br><br><br>
+<div class="grid d-flex flex-column mb-3">
+  <% if user_signed_in? %>
+    <h1 class="text-center">Tasks</h1>
+
+    <div class="d-flex justify-content-end mb-3">
+      <%= link_to "Create New Task", new_task_path, class: "btn btn-success d-none d-sm-block" %>
+    </div>
+
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
     <div class="text-center d-sm-none mb-3">
       <%= link_to "Create New Task", new_task_path, class: "btn btn-success" %>
     </div>

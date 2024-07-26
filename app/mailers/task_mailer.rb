@@ -19,6 +19,10 @@ class TaskMailer < ApplicationMailer
   private
 
   def task_url(task)
+<<<<<<< HEAD
     Rails.application.routes.url_helpers.task_url(task, host: 'localhost', port: 3000) # Update host and port for production
+=======
+    Rails.application.routes.url_helpers.task_url(task, host: 'localhost', port: 3000) # have to change host and port for production
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
   end
 end

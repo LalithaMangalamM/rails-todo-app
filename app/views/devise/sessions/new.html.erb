@@ -1,6 +1,17 @@
 <br><br><br>
 <div class="container">
+<<<<<<< HEAD
   <div class="form-container" style = "max-width: 50%;">
+=======
+<<<<<<< HEAD
+  <div class="form-container" style = "max-width: 50%;">
+=======
+  <div class="form-container">
+    <div class="image-container">
+      <%= image_tag("pictures/road.jpeg", alt: "Description", class: "image") %>
+    </div>
+>>>>>>> origin/main
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
     <div class="form-content">
       <h2 class="title">Log In</h2>
 
@@ -16,7 +27,15 @@
         <% if devise_mapping.rememberable? %>
           <div class="form-group form-check">
             <%= f.check_box :remember_me, class: 'form-check-input' %>
+<<<<<<< HEAD
             <%= f.label :remember_me, class: 'form-check-label', text: 'Remember me' %>
+=======
+<<<<<<< HEAD
+            <%= f.label :remember_me, class: 'form-check-label', text: 'Remember me' %>
+=======
+            <%= f.label :remember_me, class: 'form-check-label' %>
+>>>>>>> origin/main
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
           </div>
         <% end %>
 
@@ -25,10 +44,14 @@
         </div>
       <% end %>
 
+<<<<<<< HEAD
   <div class="form-group">
         <%= link_to 'Forgot Password', new_user_password_path, class: "btn btn-secondary ms-2", style: "background-color: #42647D; color: white;" %>
         </div>
       <%# <%= render "devise/shared/links" %>
+=======
+      <%= render "devise/shared/links" %>
+>>>>>>> e833fd3302f081aa03f0d785543041340fdc47a5
     </div>
   </div>
 </div>
